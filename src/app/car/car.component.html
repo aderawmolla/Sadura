@@ -1,0 +1,30 @@
+<style>
+
+  .truck1{
+    left: -200px; /* starting position of the trucks */
+    transition: left 5s linear; /* adjust the duration of the animation as needed */
+  }
+  
+
+  
+  @keyframes move {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(100% + 100px)); /* move the truck by the width of the container plus the width of the truck */
+    }
+  }
+  
+  .truck1{
+    animation: move 5s linear infinite;
+  }
+  </style>
+<div>
+    <div style="background-color: white;"class="animate-road relative">
+      <img class="truck1 object-center w-auto h-56 sm:h-96" src="../../assets/images/juicetrack.png" alt="" />
+      <div class="absolute inset-0 bg-opacity-50 bg-opacity-50"></div>
+    </div>
+  </div>
+
+  
