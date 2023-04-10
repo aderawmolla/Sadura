@@ -15,6 +15,7 @@ import { SaysComponent } from './says/says.component';
 import { ServicesComponent } from './services/services.component';
 import { CarComponent } from './car/car.component';
 import { TestComponent } from './test/test.component';
+import { CompaniesComponent } from './companies/companies.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TestComponent } from './test/test.component';
     SaysComponent,
     ServicesComponent,
     CarComponent,
-    TestComponent
+    TestComponent,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,
