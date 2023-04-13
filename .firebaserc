@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sadura-f0e3b": {
+      "hosting": {
+        "Juice": [
+          "sadura-f0e3b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sadura-f0e3b"
+  }
+}

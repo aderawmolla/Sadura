@@ -1,7 +1,7 @@
-<div style="background-color: beige;" >
+<div id="says" style="background-color: beige;" >
 <div style="text-align:center;" class=" flex flex-col px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-50 lg:px-50 lg:py-20 ">
     <div>
-      <h2 class="relative mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+      <h2 class="heading relative mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
         <span class="relative inline-block">
           <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
             <defs>
@@ -11,36 +11,41 @@
             </defs>
             <rect fill="url(#6bfa0e57-faa2-4bb2-ac0e-310782e5eb2d)" width="52" height="24"></rect>
           </svg>
-          <span class="relative">Our </span>
+          <span class="client relative">Our Clients Says 
+          </span>
         </span>
-        Clients Says 
       </h2>
-      <p class="mb-4 text-gray-900 lg:mb-6">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem laudantium, totam rem aperiam, eaque ipsa quae explicabo.
+      <p style="text-align: left;text-align: center;" class="mb-4 text-gray-900 lg:mb-6">
+        "Welcome to Sadura Food Processing Plant PLC - Your Trusted Source for Premium Quality Fruit Juice! With a commitment to excellence and a vision to become the largest and most diverse fruit juice and raw fruit producing consortium in Ethiopia by 2030."
       </p>
      
     </div>
 
 </div>
 
+
+
+
+
+
 <div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
   <!-- Carousel wrapper -->
  
  
-  <div class="say relative h-56 overflow-hidden rounded-lg md:h-96">
+  <div  class="say relative h-56 overflow-hidden rounded-lg md:h-96">
   <!-- 1 st item -->
-      
+     
+ <div *ngFor="let say of says">
   <div class="item hidden duration-700 ease-in-out" data-carousel-item>
-       
-    <div style="background-color:#fef9e5;" class="item flex flex-col md:flex-row items-center justify-center md:justify-start mx-auto max-w-3xl  shadow-lg rounded-lg py-8 px-4 md:p-6 absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+    <div  style="background-color:#fef9e5;" class="item flex flex-col md:flex-row items-center justify-center md:justify-start mx-auto max-w-3xl  shadow-lg rounded-lg py-8 px-4 md:p-6 absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
       <!-- Left side with person image -->
       <div class="md:w-1/4 mb-4 md:mb-0">
         <img class="rounded-full w-32 h-auto mx-auto md:mx-0" src="../../assets/images/drinker.jpeg" alt="Person Image">
       </div>
       <!-- Right side with person details -->
       <div class="md:w-3/4 md:pl-8">
-        <h2 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h2>
-        <p class="text-lg text-gray-600 mb-4">"I believe that everything happens for a reason."</p>
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">{{say.name}} </h2>
+        <p class="text-lg text-gray-600 mb-4">{{say.say}}</p>
         <ul class="flex flex-row list-none mb-4">
           <li class="mr-4">
             <a href="#" class="text-blue-500 hover:text-blue-700">
@@ -66,7 +71,7 @@
       </div>
     </div> 
     </div>
-
+</div>
 
 <!-- 2 nd item -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -78,8 +83,8 @@
             </div>
             <!-- Right side with person details -->
             <div class="md:w-3/4 md:pl-8">
-              <h2 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h2>
-              <p class="text-lg text-gray-600 mb-4">"I believe that everything happens for a reason."</p>
+              <h2 class="text-2xl font-bold text-gray-800 mb-2">Zecharias Yeshwas</h2>
+              <p class="text-lg text-gray-600 mb-4">"I hope Sadura Food processing plant PLC will be the impactful juice company in near future"</p>
               <ul class="flex flex-row list-none mb-4">
                 <li class="mr-4">
                   <a href="#" class="text-blue-500 hover:text-blue-700">
@@ -116,8 +121,8 @@
               </div>
               <!-- Right side with person details -->
               <div class="md:w-3/4 md:pl-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h2>
-                <p class="text-lg text-gray-600 mb-4">"I believe that everything happens for a reason."</p>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Alemu Abera</h2>
+                <p class="text-lg text-gray-600 mb-4">"I believe that Sadura Juice is best Juice I have ever seen"</p>
                 <ul class="flex flex-row list-none mb-4">
                   <li class="mr-4">
                     <a href="#" class="text-blue-500 hover:text-blue-700">
@@ -147,6 +152,27 @@
         </div>
       <!-- Item 2 -->  
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="flex justify-center items-center pt-4">
     <button type="button" class="flex justify-center items-center mr-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -183,6 +209,17 @@
     justify-content: space-between;
 
   }
+}
+.client{
+    margin-bottom: 1.5rem;
+    max-width: 32rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 </style>
 
