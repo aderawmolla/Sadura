@@ -40,7 +40,8 @@ import { AddeventComponent } from './addevent/addevent.component';
     TestComponent,
     CompaniesComponent,
     HomeComponent,
-    AddeventComponent
+    AddeventComponent,
+
   ],
   imports: [
     BrowserModule,
