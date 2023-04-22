@@ -2,7 +2,7 @@
 
 <section class="py-6 dark:bg-gray-800 dark:text-gray-50">
 
-	<div style="background-color:white;border-width: 4px;"class="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+	<div style="background-color:white;border-width: 4px;"class="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2  sm:grid-cols-2  md:divide-x">
 
         <section class="p-6 dark:text-gray-100">
 
@@ -30,7 +30,7 @@
 
                 </div>
                 <fieldset class="w-full  dark:text-gray-100">
-                    <label for="files" class="block text-sm font-medium">Add Image</label>
+                    <label for="fileInput" id="fileLabel" class="block text-sm font-medium">Add Image</label>
                     <div  style="background-color: white;"class="flex">
                         <input  type="file"
                         accept="image/*"
@@ -47,7 +47,7 @@
                
             </div>
         </section>
-        <div style="max-width: 30vw;background-color: beige;" class=" p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+        <div style="background-color: beige;" class=" p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
             <img  [src]="imgSrc"
                     (click)="fileUploader.click()" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
             <div class="mt-6 mb-2">
@@ -59,3 +59,25 @@
 
 </section>
 </form>
+<style>
+
+#fileInput {
+  /* Set opacity to 0 to hide the file input */
+  opacity: 0;
+  /* Set position to absolute to position it over the label */
+  position: absolute;
+  /* Set width and height to 0 to hide the file input */
+  width: 0;
+  height: 0;
+}
+</style>
+<script>
+ const fileInput = document.getElementById('fileInput');
+const fileLabel = document.getElementById('fileLabel');
+
+fileInput.addEventListener('change', (event) => {
+  const fileName = event.target.files[0].name;
+  fileLabel.textContent = fileName;
+});
+
+</script>

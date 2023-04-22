@@ -25,7 +25,7 @@ export class GalleryComponent {
       )
       .subscribe((data) => {
         this.posts=data.reverse();
-        console.log(this.posts);
+        console.log(data);
       });
   }
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +24,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { environment } from 'src/environments/environment';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AddeventComponent } from './addevent/addevent.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
